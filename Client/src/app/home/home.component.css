@@ -1,0 +1,51 @@
+.container {
+  background-image: url("assets/images/BackgroundLogo.jpg");
+  background-color: #cccccc;
+  height: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-style: oblique;
+  /* font-family: "KeterYG", serif; */
+}
+.info {
+  position: relative;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.wrapper {
+  background: rgba(255, 255, 255, 0.5);
+
+  display: inline-table;
+  padding: 3%;
+  margin: 10px;
+}
+/* .wrapper::after {
+  /* background-color: cornsilk; */
+/* background: rgba(253, 244, 244, 0.5); */
+/* opacity: 50%; */
+/* }  */
+.div-i {
+  /* border: black;
+  border-width: thin;
+  border-style: solid;
+  display: inline-table; */
+  padding: 13%;
+  margin: 10px;
+  /* border-radius: 50%;
+  width: 80px;
+  height: 80px; */
+}
+i {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 500%;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.label-i {
+  text-align: center;
+}

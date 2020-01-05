@@ -1,29 +1,31 @@
+.container {
+  /* background: url("assets/images/BackgroundLogo.jpg") no-repeat center center
+    fixed; */
+  height: 80%;
+  width: 80%;
+  display: grid;
+  text-align: center;
+  align-content: center;
+  grid-template-columns: 50% 50%;
+}
+.login {
+  width: 50%;
+}
+.invalidField {
+  color: red;
+}
+.invalidInput {
+  border-color: red;
+}
+/* body {
+  /* background: url("assets/images/BackgroundLogo.jpg") no-repeat center center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
+/* } */
 
-.container{
-   height: 100%;
-   width: 100%;
-   display: flex;
-   text-align: center;
-}
-.login{
-  
-  width: 30%;
-}
-.invalidField{
-	color:red;
-}
-.invalidInput{
-	border-color:red;
-}
-body{
-  background: url("assets/images/BackgroundLogo.jpg") no-repeat center center fixed; 
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-
-}
-
-.title{
-  width: 30%;
+.title {
+  width: 100%;
 }

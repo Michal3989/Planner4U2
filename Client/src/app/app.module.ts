@@ -1,51 +1,61 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-import {DatePipe} from '@angular/common';
+import { NgModule } from "@angular/core";
+import { HttpClientModule } from "@angular/common/http";
+import { DatePipe } from "@angular/common";
 //prime-ng
-import { KeyFilterModule } from 'primeng/keyfilter';
-import { CheckboxModule, MenuModule, ContextMenuModule, ButtonModule, PanelModule, InputTextModule, DropdownModule, StepsModule,SpinnerModule, DataTableModule, TabMenuModule, FileUploadModule, RadioButtonModule, InputMaskModule,
-    ProgressSpinnerModule, LightboxModule
-} from 'primeng/primeng';
-import { CardModule } from 'primeng/card';
+import { KeyFilterModule } from "primeng/keyfilter";
+import {
+  CheckboxModule,
+  MenuModule,
+  ContextMenuModule,
+  ButtonModule,
+  PanelModule,
+  InputTextModule,
+  DropdownModule,
+  StepsModule,
+  SpinnerModule,
+  DataTableModule,
+  TabMenuModule,
+  FileUploadModule,
+  RadioButtonModule,
+  InputMaskModule,
+  ProgressSpinnerModule,
+  LightboxModule
+} from "primeng/primeng";
+import { CardModule } from "primeng/card";
 //app components
-import { AppComponent } from './app.component';
-import { MAIN_COMPONENTS } from './+main';
-import { SHARED_COMPONENTS } from '../app/shared/uix/components/index'
-import {AUTH_COMPONENTS} from './+auth';
-
+import { AppComponent } from "./app.component";
+import { MAIN_COMPONENTS } from "./+main";
+import { SHARED_COMPONENTS } from "../app/shared/uix/components/index";
+import { AUTH_COMPONENTS } from "./+auth";
+// import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
 //app modules
-import { AppRoutingModule } from './app-routing.module';
-import { ServicesModule } from './services';
-import { SharedModule } from './shared';
-import {MessagesModule} from 'primeng/messages';
-import {MessageModule} from 'primeng/message';
-import {DataViewModule} from 'primeng/dataview';
-import { CalendarModule } from 'primeng/components/calendar/calendar';
-import { DialogModule } from 'primeng/components/dialog/dialog';
-import { AutoCompleteModule } from 'primeng/components/autocomplete/autocomplete';
-import {TabViewModule} from 'primeng/tabview';
-import { SliderModule } from 'primeng/slider';
-import {InputSwitchModule} from 'primeng/inputswitch';
+import { AppRoutingModule } from "./app-routing.module";
+import { ServicesModule } from "./services";
+import { SharedModule } from "./shared";
+import { MessagesModule } from "primeng/messages";
+import { MessageModule } from "primeng/message";
+import { DataViewModule } from "primeng/dataview";
+import { CalendarModule } from "primeng/components/calendar/calendar";
+import { DialogModule } from "primeng/components/dialog/dialog";
+import { AutoCompleteModule } from "primeng/components/autocomplete/autocomplete";
+import { TabViewModule } from "primeng/tabview";
+import { SliderModule } from "primeng/slider";
+import { InputSwitchModule } from "primeng/inputswitch";
 
-import { EventDetailsComponent } from './event-details/event-details.component';
-import { RegistrationComponent } from './registration/registration.component';
-import {NewLoginComponent} from './new-login/new-login.component';
+import { EventDetailsComponent } from "./event-details/event-details.component";
+import { RegistrationComponent } from "./registration/registration.component";
+import { NewLoginComponent } from "./new-login/new-login.component";
 
-import { GuestsComponent } from './guests/guests.component';
-import { SeatsComponent } from './seats/seats.component';
-import { MenuComponent } from './menu/menu.component';
-import { ShowsPlacesComponent } from './shows-places/shows-places.component';
-import { GuestPageComponent } from './guest-page/guest-page.component';
-
-
-
-
-
-
+import { GuestsComponent } from "./guests/guests.component";
+import { SeatsComponent } from "./seats/seats.component";
+import { MenuComponent } from "./menu/menu.component";
+import { ShowsPlacesComponent } from "./shows-places/shows-places.component";
+import { GuestPageComponent } from "./guest-page/guest-page.component";
+import { HomeComponent } from "./home/home.component";
 
 @NgModule({
   declarations: [
@@ -57,15 +67,13 @@ import { GuestPageComponent } from './guest-page/guest-page.component';
     EventDetailsComponent,
     RegistrationComponent,
     NewLoginComponent,
- 
+    // FontAwesomeModule,
     GuestsComponent,
     SeatsComponent,
     MenuComponent,
     ShowsPlacesComponent,
     GuestPageComponent,
-    
-   
-
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -99,7 +107,7 @@ import { GuestPageComponent } from './guest-page/guest-page.component';
     MessageModule,
     KeyFilterModule,
     TabViewModule,
-    
+
     RadioButtonModule,
     InputMaskModule,
     FileUploadModule,
@@ -108,13 +116,13 @@ import { GuestPageComponent } from './guest-page/guest-page.component';
     ProgressSpinnerModule,
     LightboxModule,
     BrowserAnimationsModule,
-      InputSwitchModule
+    InputSwitchModule
   ],
   providers: [
     DatePipe
     //AutoService,
     //AuthGuard
-  ], 
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
