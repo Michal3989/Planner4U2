@@ -1,52 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
-import {EventDetailsComponent} from '../event-details/event-details.component'
-import {TabMenuModule} from 'primeng/tabmenu';
-import {MenuItem} from 'primeng/api';
+import { EventDetailsComponent } from "../event-details/event-details.component";
+import { TabMenuModule } from "primeng/tabmenu";
+import { MenuItem } from "primeng/api";
+import { EventService, CommonService } from "../services";
+import { EventDto, EventTypeDto } from "../models";
 
 @Component({
-  selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  selector: "app-menu",
+  templateUrl: "./menu.component.html",
+  styleUrls: ["./menu.component.css"]
 })
 export class MenuComponent implements OnInit {
-  // items: MenuItem[];
-  // activeItem: MenuItem;
+  eventList: EventDto[];
+  constructor(
+    private eventService: EventService,
+    private commonService: CommonService,
+    private router: Router
+  ) {}
 
-  //componentData:any;
-  constructor(private router:Router) { }
+  async ngOnInit() {
+    let _eventList: EventDto[] = await this.eventService
+      .getEventsList(this.commonService.currentOwner.id)
+      .toPromise();
+    this.eventList = _eventList;
 
-  ngOnInit() {
-    //    this.items =
-    //     [
-    //     {label: 'פרטי אירוע', icon: 'fa fa-fw fa-book',routerLink:"/new-event"},
-    //     {label: 'מוזמנים', icon: 'fa fa-fw fa-calendar',routerLink:"/guests"},
-    //     {label: 'סידור שולחנות', icon: 'fa fa-fw fa-book',routerLink:"/seats"},
-    //     {label: 'מראה מקומות', icon: 'fa fa-fw fa-support',routerLink:"/show-places"},
-    //     {label: 'דף אישור הגעה', icon: 'fa fa-fw fa-twitter',routerLink:"/guest-page"}
-    //     ];
-  
-    // this.activeItem = this.items[0];
+    let eventTypeList: EventTypeDto[] = await this.eventService
+      .getEventTypes()
+      .toPromise();
+    this.commonService.eventTypes = eventTypeList;
+  }
+  changeEvent(_event: EventDto) {
+    this.eventService.changeEvent(_event.id).subscribe((data: EventDto) => {
+      this.commonService.currentEvent = data;
+      // this.setFormGroupsValues();
+      // this._cdr.detectChanges();
+      this.commonService.flagToChangeEvent.next(true);
+    });
+  }
 }
-   
-  
-
-}
-// export class TabMenuDemo {
-    
-//   items: MenuItem[];
-  
-//   activeItem: MenuItem;
-
-//   // ngOnInit() {
-//   //     this.items = [
-//   //         {label: 'Stats', icon: 'fa fa-fw fa-bar-chart'},
-//   //         {label: 'Calendar', icon: 'fa fa-fw fa-calendar'},
-//   //         {label: 'Documentation', icon: 'fa fa-fw fa-book'},
-//   //         {label: 'Support', icon: 'fa fa-fw fa-support'},
-//   //         {label: 'Social', icon: 'fa fa-fw fa-twitter'}
-//   //     ];
-      
-//   //     this.activeItem = this.items[2];
-//   // }
-// }

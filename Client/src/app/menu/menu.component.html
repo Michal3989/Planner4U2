@@ -1,17 +1,37 @@
-<!-- -->
-<br/><br/><br/><br/>
-<div class="tab-view-div aa">
- <p-tabView  class="tab-view-class">
-  <p-tabPanel header="פרטי אירוע" > <app-event-details></app-event-details> </p-tabPanel>
-  <p-tabPanel   header="מוזמנים"> <app-guests></app-guests> </p-tabPanel>
-  <p-tabPanel  header="סידור שולחנות" >  <app-seats></app-seats>  </p-tabPanel>
-  <p-tabPanel  header="מראה מקומות" > <app-shows-places></app-shows-places> </p-tabPanel>
-  <p-tabPanel  header="דף אישור הגעה" > <app-guest-page></app-guest-page> </p-tabPanel>
-</p-tabView> 
-</div>
-<!-- <div >
-  <p-tabMenu [model]="items" > </p-tabMenu> 
-</div> -->
+<nav class="navi">
+  <div class="logo-div">
+    <img class="img-logo" src="assets/images/logo-04.png" />
+  </div>
+  <div class="nav-menu nav-menu-menu">
+    <button class="nav-menu-item" routerLink="/">
+      יציאה
 
+      <i class="fa fa-sign-out"></i>
+    </button>
+    <button class="nav-menu-item menu-item-this" routerLink="/event-details">
+      אירועים
 
+      <i class="fa fa-sign-out"></i>
+    </button>
+    <button class="nav-menu-item" routerLink="/guests">
+      מוזמנים
 
+      <i class="fa fa-sign-out"></i>
+    </button>
+    <button class="nav-menu-item" routerLink="/seats">
+      סידור שולחנות
+
+      <i class="fa fa-sign-out"></i>
+    </button>
+    <button class="nav-menu-item" routerLink="/show-places">
+      מראה מקומות
+
+      <i class="fa fa-sign-out"></i>
+    </button>
+    <button class="nav-menu-item " routerLink="/guest-page">
+      דף אישור הגעה
+      <i class="fas fa-edit i-nav"></i>
+    </button>
+  </div>
+</nav>
+<app-event-details></app-event-details>

@@ -1,109 +1,193 @@
-.container{
-    width: 100%;
-    /* display: grid;
-	grid-template-columns: 1fr 2fr 3fr  1fr;
-	grid-template-rows: 2fr 3fr 2fr 1fr;
-    grid-template-areas:
-      ". . . ."
-	  ". eventDetailsForm eventDetailsForm ."
-	  ". eventList uploadFile ."
-	  ". newEventButton newEventButton ." */
+.container {
+  background-image: url("assets/images/BackgroundLogo.jpg");
+  background-color: #cccccc;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 100%;
 }
-.eventDetailsForm{
+
+.wrapper {
+  padding: 3%;
+  margin: 10px;
+  /* login: */
+
+  background: rgba(255, 255, 255, 0.5);
+
+  display: inline-grid;
+
+  width: 60%;
+}
+
+.div-text {
+  /* margin: 10px;
+  margin-right: 0; */
+  margin: 0 0 10px;
+  font-weight: 500;
+  padding-right: 5px;
+  display: block;
+  /*login:*/
+  display: inline;
+}
+
+.input-detail {
+  background-color: transparent;
+  border: none;
+  padding-right: 5px;
+  border-bottom: 2px solid #8a7878;
+  margin: 0 0 15px;
+}
+input:focus {
+  outline: none;
+
+  border-bottom: 2px solid black;
+}
+
+.eventDetailsForm {
   grid-area: eventDetailsForm;
 }
-.upload-file{
+.upload-file {
   /* grid-area: uploadFile; */
   display: none;
 }
-.label-of-file-new-upload{
-    display:inline-block;
-margin:20px;
+.label-of-file-new-upload {
+  display: inline-block;
+  margin: 20px;
 
-padding-top: 85px;
-padding-bottom: 85px;
-background-color:transparent;
-border:solid 3px rgb(252, 166, 180);
-border-radius: 6px;
-border-style: dashed;
-color:rgb(252, 166, 180);
-font-size: 250%;
-/*text-align: center;*/
-top: 80%;
-
+  padding-top: 85px;
+  padding-bottom: 85px;
+  background-color: transparent;
+  border: solid 3px rgb(252, 166, 180);
+  border-radius: 6px;
+  border-style: dashed;
+  color: rgb(252, 166, 180);
+  font-size: 250%;
+  /*text-align: center;*/
+  top: 80%;
 }
 
-.label-of-file{
-    display:inline-block;
-margin:20px;
+.label-of-file {
+  display: inline-block;
+  margin: 20px;
 
-background-color:transparent;
-border:solid 3px rgb(252, 166, 180);
-border-radius: 6px;
-border-style: dashed;
-color:rgb(252, 166, 180);
-font-size: 150%;
-width: 40%;
-/*text-align: center;*/
-top: 200%;
-
+  background-color: transparent;
+  border: solid 3px rgb(252, 166, 180);
+  border-radius: 6px;
+  border-style: dashed;
+  color: rgb(252, 166, 180);
+  font-size: 150%;
+  width: 40%;
+  /*text-align: center;*/
+  top: 200%;
 }
-body{
-    /* background-image: url("assets/images/BackgroundLogo.jpg");
-      height: 100vh;
-       background-size: 100% 100%;
-      background-attachment: fixed;  */
-/*       
-      background: url("assets/images/BackgroundLogo.jpg") no-repeat center center fixed; 
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover; */
 
-       
-
-
-  
-  } 
 .header {
-    text-align: center;
+  text-align: center;
 }
 
 .header h1 {
-    font-family: serif;
-    font-size: 38px;
-    font-family: 'Times New Roman';
+  font-family: serif;
+  font-size: 38px;
+  font-family: "Times New Roman";
 }
 
 .content {
-    margin: 100px;
+  margin: 100px;
 }
 
 .margin25 {
-    margin: 25px;
+  margin: 25px;
 }
 
 .upload {
-    cursor: pointer;
+  cursor: pointer;
 }
-.invalidField{
-    color:red;
+.invalidField {
+  color: red;
 }
-.invalidInput{
-    border-color:red;
+.invalidInput {
+  border-color: red;
 }
-
-
 
 .container-flex {
-    direction: rtl;
-    height:50%;
-    width:100%;
-    display: flex;
+  direction: rtl;
+  height: 50%;
+  width: 100%;
+  display: flex;
 }
+
 .eventList {
-    width:30%;
+  width: 0;
 }
 .eventDetailsForm {
-    width: 40%
+  width: 40%;
+}
+/* e91e633b */
+.event-list-item {
+  position: relative;
+  margin: 10px;
+  right: 190%;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: #fadedc;
+  border-color: #735959;
+  border-style: groove;
+  text-align: center;
+  padding: 10px;
+  padding-top: 20px;
+}
+.event-list-item:hover {
+  background-color: #c851793b;
+  cursor: pointer;
+}
+
+.form-event-details {
+  background-color: #f9c6d6;
+  position: relative;
+  top: -600px;
+  right: 40%;
+}
+.buttons-div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10%;
+}
+.confirm-event-button {
+  background-color: #f8c5c6;
+  margin-top: 25px;
+}
+.confirm-event-button:hover {
+  font-size: large;
+}
+
+.new-event-button {
+  /* font-size: large; */
+  font-weight: bold;
+}
+* {
+  box-sizing: border-box;
+}
+p {
+  margin: 0 0 8px;
+}
+/* Create two equal columns that floats next to each other */
+.column-1 {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  /* height: 300px; Should be removed. Only for demonstration */
+}
+.column-2 {
+  float: left;
+  width: 80%;
+  padding: 10px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }

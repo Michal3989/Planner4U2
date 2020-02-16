@@ -1,20 +1,43 @@
+<nav class="navi">
+  <div class="logo-div">
+    <img class="img-logo" src="assets/images/logo-04.png" />
+  </div>
+  <div class="nav-menu-home">
+    <button class="nav-menu-item" routerLink="/new-login">
+      לחשבון שלי
+      <i class="fas fa-user i-nav"></i>
+    </button>
+    <div class="nav-menu-item" routerLink="new-user">
+      יצירת חשבון
+
+      <i class="fas fa-edit i-nav"></i>
+    </div>
+  </div>
+</nav>
+
 <div class="container">
+  <!-- <div class="buttons">
+    <button class="login-button">כניסה לאירועים שלי</button>
+    <button class="regist-button">יצירת חשבון בחינם</button>
+  </div> -->
+
   <div class="info">
     <div class="wrapper">
       <div class="div-i">
-        <i class="fas fa-edit"></i>
+        <i class="far fa-id-card i-container"></i>
       </div>
-      <div class="label-i">יוצרים אירוע</div>
+      <br />
+      <div class="label-i">יוצרים אירוע<br /></div>
     </div>
     <div class="wrapper">
       <div class="div-i">
-        <i class="fas fa-users"></i>
+        <i class="fas fa-users i-container"></i>
       </div>
       <div class="label-i">מכניסים את <br />רשימת המוזמנים</div>
     </div>
     <div class="wrapper">
       <div class="div-i">
-        <i class="fas fa-envelope-square"></i>
+        <i class="fas fa-envelope-square i-container"></i>
       </div>
       <div class="label-i">
         נשלחים ומתקבלים <br />
@@ -23,9 +46,10 @@
     </div>
     <div class="wrapper">
       <div class="div-i">
-        <i class="fas fa-braille"></i>
+        <i class="fas fa-braille i-container"></i>
       </div>
       <div class="label-i">אנחנו נסדר <br />לכם את המקומות</div>
     </div>
   </div>
+  <!-- <app-new-login></app-new-login> -->
 </div>

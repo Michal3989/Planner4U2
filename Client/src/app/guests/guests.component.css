@@ -1,58 +1,116 @@
-.invalidField{
-    color:red;
+.invalidField {
+  color: red;
 }
-.invalidInput{
-    border-color:red;
+.invalidInput {
+  border-color: red;
 }
-.container-flex {
-    direction: rtl;
+.container {
+  /* direction: rtl;
     height:50%;
     width:100%;
-    display: flex;
+    display: flex; */
+  background-image: url("assets/images/BackgroundLogo.jpg");
+  background-color: #cccccc;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
 }
 
-table{
-    width: 70%;
-   
+table {
+  width: 70%;
 }
-  table ,tr td{
-      border:1px solid palevioletred;
-  }
-  tbody {
-      display:block;
-      height:550px;
-      overflow:auto;
-  }
-  thead, tbody tr {
-      display:table;
-      width:100%;
-      table-layout:fixed;/* even columns width , fix width of table too*/
-  }
-  thead {
-      width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width */
-  }
-  /* table {
+table,
+tr td {
+  border: 1px solid palevioletred;
+}
+tbody {
+  display: block;
+  height: 550px;
+  overflow: auto;
+}
+thead,
+tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed; /* even columns width , fix width of table too*/
+}
+thead {
+  width: calc(
+    100% - 1em
+  ); /* scrollbar is average 1em/16px width, remove it from thead width */
+}
+/* table {
       width:400px;
   } */
 
-.form-new-guest{
+.form-new-guest {
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 30%;
+}
+.numberInput {
+  width: 60%;
+  background-color: rgb(245, 217, 222);
+}
+.checkboxInput {
+  text-align: center;
+}
+.message-div {
+  text-align: center;
+}
+.message-span {
+  font-size: 700%;
+  color: palevioletred;
+}
+.column-1 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+.column-2 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
 
-padding-left: 5%;
-padding-right: 5%;
-    width: 30%;
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.div-btn {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+}
+.save-button {
+  background-color: #fae8e3;
+  color: #8a7878;
+  margin-left: 10%;
+  width: 150px;
+  height: 50px;
+  font-size: large;
+  font-weight: 600;
+  border: solid;
+  border-radius: 10px;
+}
 
+.save-button:hover {
+  /* background-color: #fdf5f5;
+    color: #fcdcdd; */
+  color: #fae8e3;
+  background-color: #8a7878;
+  border-color: #fae8e3;
 }
-.numberInput{
-    width: 60%;
-    background-color: rgb(245, 217, 222);
-}
-.checkboxInput{
-    text-align: center;
-}
-.message-div{
-    text-align: center ;
-}
-.message-span{
-    font-size: 700%;
-    color: palevioletred;
+.set-seating-button {
+  background-color: #f18e9f;
+  color: white;
+  width: 150px;
+  height: 50px;
+  font-size: large;
+  font-weight: 600;
 }

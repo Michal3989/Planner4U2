@@ -1,18 +1,59 @@
+<nav class="navi">
+  <div class="logo-div">
+    <img class="img-logo" src="assets/images/logo-04.png" />
+  </div>
+  <div class="nav-menu nav-menu-menu">
+    <button class="nav-menu-item" routerLink="/">
+      יציאה
 
+      <i class="fa fa-sign-out"></i>
+    </button>
+    <button class="nav-menu-item" routerLink="/event-details">
+      אירועים
+
+      <i class="fa fa-sign-out"></i>
+    </button>
+    <button class="nav-menu-item" routerLink="/guests">
+      מוזמנים
+
+      <i class="fa fa-sign-out"></i>
+    </button>
+    <button class="nav-menu-item" routerLink="/seats">
+      סידור שולחנות
+
+      <i class="fa fa-sign-out"></i>
+    </button>
+    <button class="nav-menu-item" routerLink="/show-places">
+      מראה מקומות
+
+      <i class="fa fa-sign-out"></i>
+    </button>
+    <button class="nav-menu-item menu-item-this" routerLink="/guest-page">
+      דף אישור הגעה
+      <i class="fas fa-edit i-nav"></i>
+    </button>
+  </div>
+</nav>
 <div class="container">
   <div class="invitation">
-    <div><img style="width:400px" *ngIf="eventPicture!=null" src="http://localhost:52718/images/{{eventPicture}}"></div>
+    <div>
+      <img
+        style="width:400px"
+        *ngIf="eventPicture != null"
+        src="http://localhost:52718/images/{{ eventPicture }}"
+      />
+    </div>
     <h3>:נא לאשר הגעה</h3>
   </div>
   <div class="confirm">
     <div>
       <label class="form-group">:מס' גברים</label>
-     <input type="number" [(ngModel)]="numOfMale" class="form-control">
+      <input type="number" [(ngModel)]="numOfMale" class="form-control" />
     </div>
     <div>
       <label class="form-group">:מס' נשים</label>
-      <input type="number" [(ngModel)]="numOfFemale" class="form-control">
+      <input type="number" [(ngModel)]="numOfFemale" class="form-control" />
     </div>
-      <button (click)="confirm()">אשר הגעה</button>
+    <button (click)="confirm()">אשר הגעה</button>
   </div>
 </div>

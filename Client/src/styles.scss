@@ -2,14 +2,17 @@
 @import url("https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css");
 @import url("http://serve.fontsproject.com/css?family=Asakim:700");
 @import url("http://serve.fontsproject.com/css?family=KeterYG:700");
+@import url("https://www.w3schools.com/w3css/4/w3.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 .body-class {
   direction: rtl;
   text-align: right !important;
-  margin: 5%;
+  // margin: 5%;
   font-size: 1em !important;
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
+
   // background-image: url("assets/images/Background-medum.jpg");
 
   background-repeat: no-repeat;
@@ -100,14 +103,14 @@ a {
   padding: 0%;
 }
 button {
-  background-color: rgb(214, 121, 152);
+  // background-color: rgb(214, 121, 152);
   border: none;
   border-radius: 6px;
-  color: white;
+  // color: white;
   padding: 8px 15px;
   /* text-decoration: none;
   display: inline-block; */
-  font-size: 15px;
+  // font-size: 15px;
   margin: 4px 2px;
   /* cursor: pointer; */
 }
@@ -152,4 +155,83 @@ button {
   text-align: center;
   padding-top: 200px;
   opacity: 0.5;
+}
+//nav:
+
+.navi {
+  direction: ltr;
+  /* margin-left: 5%; */
+  margin-bottom: 20px;
+  /* margin-top: 10px; */
+  list-style: none;
+  display: -webkit-box;
+  display: flex;
+  /* margin-right: 5%; */
+}
+.logo-div {
+  height: 70px;
+  width: unset;
+
+  background-color: #fadedc;
+}
+.nav-menu-home {
+  color: white;
+  -webkit-box-pack: right;
+  justify-content: right;
+  background-color: #fadedc;
+  font-size: x-large;
+  width: -webkit-fill-available;
+  display: -webkit-box;
+  display: flex;
+  direction: rtl;
+  align-items: center;
+}
+
+.nav-menu {
+  color: white;
+  -webkit-box-pack: right;
+  justify-content: space-around !important;
+  background-color: #fadedc;
+  font-size: larger !important;
+  width: -webkit-fill-available;
+  display: -webkit-box;
+  display: flex;
+  direction: rtl;
+  align-items: center;
+}
+.nav-menu-item {
+  background-color: #fadedc;
+  padding: 5px;
+  margin: 5px;
+}
+
+.menu-item-this {
+  background-color: #fef9f8;
+  color: #9e9c9c;
+  padding: 10px;
+  margin: 5px;
+  // width: 20%;
+}
+.nav-menu-item:hover {
+  background-color: #fef9f8;
+  color: #9e9c9c;
+  padding: 10px;
+  margin: 5px;
+}
+.i-nav {
+  margin: 5px;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 100%;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.img-logo {
+  height: inherit;
+  width: inherit;
+}
+.breadcrumbs {
+  direction: rtl;
+  margin: 10px;
 }

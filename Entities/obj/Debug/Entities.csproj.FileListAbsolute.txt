@@ -45,3 +45,15 @@ C:\d\המסמכים שליD\אפרת\הנדסאים יד\M\הנדסאים יד\�
 C:\d\המסמכים שליD\אפרת\הנדסאים יד\M\הנדסאים יד\פרויקט\ProjectExample\Entities\obj\Debug\Entities.csproj.CopyComplete
 C:\d\המסמכים שליD\אפרת\הנדסאים יד\M\הנדסאים יד\פרויקט\ProjectExample\Entities\obj\Debug\Entities.dll
 C:\d\המסמכים שליD\אפרת\הנדסאים יד\M\הנדסאים יד\פרויקט\ProjectExample\Entities\obj\Debug\Entities.pdb
+C:\Users\1\Desktop\planner4u\Planner4U\Entities\bin\Debug\Entities.dll.config
+C:\Users\1\Desktop\planner4u\Planner4U\Entities\bin\Debug\Entities.dll
+C:\Users\1\Desktop\planner4u\Planner4U\Entities\bin\Debug\Entities.pdb
+C:\Users\1\Desktop\planner4u\Planner4U\Entities\bin\Debug\EntityFramework.dll
+C:\Users\1\Desktop\planner4u\Planner4U\Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\1\Desktop\planner4u\Planner4U\Entities\bin\Debug\EntityFramework.xml
+C:\Users\1\Desktop\planner4u\Planner4U\Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\1\Desktop\planner4u\Planner4U\Entities\obj\Debug\Entities.csprojAssemblyReference.cache
+C:\Users\1\Desktop\planner4u\Planner4U\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+C:\Users\1\Desktop\planner4u\Planner4U\Entities\obj\Debug\Entities.csproj.CopyComplete
+C:\Users\1\Desktop\planner4u\Planner4U\Entities\obj\Debug\Entities.dll
+C:\Users\1\Desktop\planner4u\Planner4U\Entities\obj\Debug\Entities.pdb

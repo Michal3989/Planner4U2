@@ -1,37 +1,209 @@
-<body>
+<!-- <body> -->
+<nav class="navi">
+  <div class="logo-div">
+    <img class="img-logo" src="assets/images/logo-04.png" />
+  </div>
+  <div class="nav-menu-home">
+    <button class="nav-menu-item" routerLink="/">
+      יציאה
+
+      <i class="fa fa-sign-out"></i>
+    </button>
+
+    <button class="nav-menu-item menu-item-this" routerLink="/new-user">
+      יצירת חשבון
+
+      <i class="fas fa-edit i-nav"></i>
+    </button>
+  </div>
+</nav>
 <div class="container">
-  <form [formGroup]="registrationForm"> 
-      <div class="form-group">
-          <input class="form-control"  type="text" [ngClass]="{'invalidInput':!registrationForm.controls['firstName'].valid&&registrationForm.controls['firstName'].dirty}" placeholder="נא הכנס שם פרטי" formControlName="firstName" name="firstName" id="firstName">
-          <div class="invalidField" *ngIf="!registrationForm.controls['firstName'].valid&&registrationForm.controls['firstName'].dirty">שדה זה הינו שדה חובה</div>
-          <label for="firstName">שם פרטי</label>
+  <div class="breadcrumbs">הרשמה</div>
+  <form [formGroup]="registrationForm" class="regi">
+    <!-- <form> -->
+    <div class="wrapper">
+      <!-- <div class="form-group"> -->
+      <div class="div-text">
+        שם פרטי
       </div>
-      <div class="form-group">
-          <input  type="text" [ngClass]="{'invalidInput':!registrationForm.controls['lastName'].valid&&registrationForm.controls['lastName'].dirty}" placeholder="נא הכנס שם משפחה" formControlName="lastName" class="form-control"  name="lastName" id="lastName">
-          <div class="invalidField" *ngIf="!registrationForm.controls['lastName'].valid&&registrationForm.controls['lastName'].dirty">שדה זה הינו שדה חובה</div>
-          <label for="lastName">שם משפחה</label>
+      <input
+        autocomplete="off"
+        class=" input-regi"
+        type="text"
+        [ngClass]="{
+          invalidInput:
+            !registrationForm.controls['firstName'].valid &&
+            registrationForm.controls['firstName'].dirty
+        }"
+        formControlName="firstName"
+        name="firstName"
+        id="firstName"
+      />
+      <div
+        class="invalidField"
+        *ngIf="
+          !registrationForm.controls['firstName'].valid &&
+          registrationForm.controls['firstName'].dirty
+        "
+      >
+        חובה להכניס שם פרטי
+        <!-- </div> -->
       </div>
-      <div class="form-group">
-          <input type="number" [ngClass]="{'invalidInput':!registrationForm.controls['phone'].valid&&registrationForm.controls['phone'].dirty}" placeholder="נא הכנס מספר טלפון" formControlName="phone" class="form-control"  name="phone" id="phone">
-          <div class="invalidField" *ngIf="!registrationForm.controls['phone'].valid&&registrationForm.controls['phone'].dirty">שדה זה הינו שדה חובה</div>
-          <label for="phone">טלפון</label>
+
+      <!-- <div class="form-group"> -->
+      <div class="div-text">
+        שם משפחה
       </div>
-      <div class="form-group">
-          <input type="text" [ngClass]="{'invalidInput':!registrationForm.controls['email'].valid&&registrationForm.controls['email'].dirty}" placeholder="נא הכנס כתובת מייל" formControlName="email" class="form-control"  name="email" id="email">
-          <div class="invalidField" *ngIf="!registrationForm.controls['email'].valid&&registrationForm.controls['email'].dirty">שדה זה הינו שדה חובה</div>
-          <label for="email">דוא"ל</label>
+      <input
+        autocomplete="off"
+        type="text"
+        [ngClass]="{
+          invalidInput:
+            !registrationForm.controls['lastName'].valid &&
+            registrationForm.controls['lastName'].dirty
+        }"
+        formControlName="lastName"
+        class="input-regi"
+        name="lastName"
+        id="lastName"
+      />
+
+      <div
+        class="invalidField"
+        *ngIf="
+          !registrationForm.controls['lastName'].valid &&
+          registrationForm.controls['lastName'].dirty
+        "
+      >
+        חובה להכניס שם משפחה
       </div>
-      <div class="form-group">
-          <input type="text" [ngClass]="{'invalidInput':!registrationForm.controls['password'].valid&&registrationForm.controls['password'].dirty}" placeholder="נא הכנס סיסמא" formControlName="password" class="form-control"  name="password" id="password">
-          <div class="invalidField" *ngIf="!registrationForm.controls['password'].valid&&registrationForm.controls['password'].dirty">שדה זה הינו שדה חובה</div>
-          <label for="password">סיסמא</label>
+
+      <!-- </div> -->
+      <!-- <div class="form-group"> -->
+      <div class="div-text">
+        טלפון
       </div>
-      <div class="form-group">
-        <input type="text" placeholder="נא אמת סיסמא" class="form-control" name="confirmPassword" id="confirmPassword">
-        <label for="confirmPassword">אימות סיסמא</label>
+      <input
+        type="number"
+        [ngClass]="{
+          invalidInput:
+            !registrationForm.controls['phone'].valid &&
+            registrationForm.controls['phone'].dirty
+        }"
+        formControlName="phone"
+        autocomplete="off"
+        class="input-regi"
+        name="phone"
+        id="phone"
+      />
+
+      <div
+        class="invalidField"
+        *ngIf="
+          !registrationForm.controls['phone'].valid &&
+          registrationForm.controls['phone'].dirty
+        "
+      >
+        חובה להכניס מספר טלפון
+      </div>
+
+      <!-- </div> -->
+      <!-- <div class="form-group"> -->
+      <div class="div-text">
+        דוא"ל
+      </div>
+      <input
+        type="text"
+        [ngClass]="{
+          invalidInput:
+            !registrationForm.controls['email'].valid &&
+            registrationForm.controls['email'].dirty
+        }"
+        autocomplete="off"
+        formControlName="email"
+        class="input-regi"
+        name="email"
+        id="email"
+      />
+
+      <div
+        class="invalidField"
+        *ngIf="
+          !registrationForm.controls['email'].valid &&
+          registrationForm.controls['email'].dirty
+        "
+      >
+        חובה להכניס כתובת אימייל
+      </div>
+
+      <!-- </div> -->
+      <!-- <div class="form-group"> -->
+      <div class="div-text">
+        סיסמא
+      </div>
+      <input
+        type="text"
+        [ngClass]="{
+          invalidInput:
+            !registrationForm.controls['password'].valid &&
+            registrationForm.controls['password'].dirty
+        }"
+        autocomplete="off"
+        formControlName="password"
+        class="input-regi"
+        name="password"
+        id="password"
+      />
+
+      <div
+        class="invalidField"
+        *ngIf="
+          !registrationForm.controls['password'].valid &&
+          registrationForm.controls['password'].dirty
+        "
+      >
+        חובה להכניס סיסמא
+      </div>
+      <button
+        class="regi-button"
+        type="submit"
+        (click)="saveOwnerDetails()"
+        [disabled]="registrationForm.invalid"
+      >
+        צור אירוע חדש ללא תשלום
+      </button>
+      <!-- </div> -->
+      <!-- <div class="form-group"> -->
+      <!-- <div class="div-text">
+        אימות סיסמא
+        <input
+          type="text"
+          class="input-regi"
+          name="confirmPassword"
+          id="confirmPassword"
+          autocomplete="off"
+        />
+      </div>
+      <div
+        class="invalidField"
+        *ngIf="
+          registrationForm.controls['password'] !=
+          registrationForm.controls['confirmPassword']
+        "
+      >
+        חובה להכניס סיסמא תואמת
+      </div> -->
+      <!-- </div> -->
     </div>
-      <button type="submit" (click)="saveOwnerDetails()"  [disabled]="registrationForm.invalid">צור אירוע חדש ללא תשלום</button>
-  
-  </form> 
+    <!-- <button
+      class="regi-button"
+      type="submit"
+      (click)="saveOwnerDetails()"
+      [disabled]="registrationForm.invalid"
+    >
+      צור אירוע חדש <br />ללא תשלום
+    </button> -->
+    <!-- </form> -->
+  </form>
+  <!-- </body> -->
 </div>
-</body>

@@ -1,3 +1,20 @@
 .tab-view-div {
-    background-color: transparent !important;
+  background-color: transparent !important;
+}
+
+.p-tabViewMy {
+}
+.p-tabPanelMy {
+}
+.nav-menu-menu {
+  color: white;
+  -webkit-box-pack: right;
+  justify-content: space-around !important;
+  background-color: #fadedc;
+  font-size: larger !important;
+  width: -webkit-fill-available;
+  display: -webkit-box;
+  display: flex;
+  direction: rtl;
+  align-items: center;
 }
