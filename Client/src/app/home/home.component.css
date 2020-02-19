@@ -10,15 +10,18 @@
 }
 .wrapper {
   background: rgba(255, 255, 255, 0.35);
-  border: solid;
+  /* border: solid;
   border-radius: 50%;
-  border-color: beige;
+  border-color: beige; */
   display: inline-table;
   padding: 3%;
   margin: 10px;
 }
 .wrapper:hover {
   background: rgba(255, 255, 255, 0.6);
+  /* border: solid;
+  /* border-radius: 50%; */
+  /* border-color: beige; */
 }
 .info {
   margin-top: 10%;

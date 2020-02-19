@@ -20,6 +20,11 @@ import { ViewRef_ } from "@angular/core/src/view";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class GuestsComponent implements OnInit {
+  guestsDetailsList: GuestsForViewDto[];
+  categoriesList: CategoryDto[] = [];
+  guestForm: FormGroup;
+  newGuest: GuestDto;
+
   constructor(
     private guestsService: GuestsService,
     private commonService: CommonService,
@@ -28,12 +33,6 @@ export class GuestsComponent implements OnInit {
   ) {
     this.newGuest = new GuestDto();
 
-    this.commonService.flagToChangeEvent.subscribe(data => {
-      if (this.commonService.currentEvent.id) {
-        this.getGuestsDetails();
-        this.getCategories();
-      }
-    });
     this.guestForm = new FormGroup({
       degreeBefore: new FormControl(),
       degreeAfter: new FormControl(),
@@ -43,29 +42,36 @@ export class GuestsComponent implements OnInit {
       categoryCode: new FormControl("", [Validators.required])
     });
   }
-  guestsDetailsList: GuestsForViewDto[];
-  categoriesList: CategoryDto[];
-  guestForm: FormGroup;
-  newGuest: GuestDto;
 
   ngOnInit() {
+    // this.commonService.flagToChangeEvent.next(true);
+
+    this.commonService.flagToChangeEvent.subscribe(data => {
+      if (this.commonService.currentEvent.id) {
+        // this.getGuestsDetails();
+        console.log("oninit get this.categoriesList[]..");
+      }
+    });
+    this.getCategories();
+    this._cdr.detectChanges();
+
     // let _guestsDetailsList: GuestsForViewDto[] = await this.guestsService
     //   .getGuestsDetails(this.commonService.currentEvent.id)
     //   .toPromise();
     // this.guestsDetailsList = _guestsDetailsList;
-    this.commonService.flagToChangeEvent.subscribe(data => {
-      if (this.commonService.currentEvent.id) {
-        this.getGuestsDetails();
-        this.getCategories();
-        // this.getCategories();
-        // let _categories: CategoryDto[] = await this.guestsService
-        //   .getCategories(this.commonService.currentEvent.id)
-        //   .toPromise();
-        // this.categoriesList = _categories;
-        console.log(this.categoriesList);
-        console.log(this.guestsDetailsList);
-      }
-    });
+    // this.commonService.flagToChangeEvent.subscribe(data => {
+    //   if (this.commonService.currentEvent.id) {
+    //     this.getGuestsDetails();
+    //     this.getCategories();
+    // this.getCategories();
+    // let _categories: CategoryDto[] = await this.guestsService
+    //   .getCategories(this.commonService.currentEvent.id)
+    //   .toPromise();
+    // this.categoriesList = _categories;
+    // console.log("oninit:" + this.categoriesList);
+    // console.log(this.guestsDetailsList);
+    //   }
+    // });
     // for(var i=0;i<10;i++)
     // {
     //   this.guestsDetailsList.push(new GuestsDetailsDto());
@@ -76,7 +82,7 @@ export class GuestsComponent implements OnInit {
     this.guestsService
       .getGuestsDetails(this.commonService.currentEvent.id)
       .subscribe((data: GuestsForViewDto[]) => {
-        console.log(data);
+        console.log("func:" + data);
         this.guestsDetailsList = data;
         debugger;
         if (this._cdr && !(this._cdr as ViewRef_).destroyed) {
@@ -157,27 +163,24 @@ export class GuestsComponent implements OnInit {
       this._cdr.detectChanges();
     });
   }
-  async tryGet() {
-    let _guestsDetailsList: GuestsForViewDto[] = await this.guestsService
-      .getGuestsDetails(this.commonService.currentEvent.id)
-      .toPromise();
-    this.guestsDetailsList = _guestsDetailsList;
-    // this.commonService.flagToChangeEvent.subscribe(data => {
-    //   if (this.commonService.currentEvent.id) {
-    //     this.getGuestsDetails();
-    this.getCategories();
-    let _categories: CategoryDto[] = await this.guestsService
-      .getCategories(this.commonService.currentEvent.id)
-      .toPromise();
-    this.categoriesList = _categories;
-    console.log(this.categoriesList);
-    console.log(this.guestsDetailsList);
-  }
+
   getCategories() {
     this.guestsService
       .getCategories(this.commonService.currentEvent.eventTypeCode)
       .subscribe(data => {
-        this.categoriesList = data;
+        console.log(data);
+
+        data.forEach(category => {
+          this.categoriesList.push(category);
+          // if (this._cdr && !(this._cdr as ViewRef_).destroyed) {
+          console.log("detectChanges");
+          this._cdr.detectChanges();
+          // }
+        });
+        // if (this._cdr && !(this._cdr as ViewRef_).destroyed) {
+        console.log("detectChanges");
+        this._cdr.detectChanges();
+        // }
       });
   }
 
@@ -186,4 +189,5 @@ export class GuestsComponent implements OnInit {
       console.log(data);
     });
   }
+  convertListOfCategories() {}
 }

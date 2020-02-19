@@ -36,83 +36,83 @@
 </nav>
 <div class="container">
   <div class="wrapper">
-    <div class="div-btn">
-      <button class="save-button" (click)="saveTables()">שמור</button>
-      <button (click)="setSeating()" class="set-seating-button ">
-        הושבה
-      </button>
-    </div>
     <!-- <h2 class="">גודל השולחנות באולם:</h2> -->
-    <div class="ddd">
-      <div class="div-male">
-        <h3 class="">גברים:</h3>
-        <div id="male" class="gender-div">
-          <div *ngFor="let table of tableTypeList">
-            <div *ngIf="table.male == true" class="div-kind-of-table">
-              <div for="amount" class="div-text">מספר שולחנות</div>
-              <input
-                type="number"
-                [(ngModel)]="table.amount"
-                class="input-detail"
-                name="amount"
-                id="amount"
-              />
 
-              <div for="numOfPeople" class="div-text">מספר אנשים</div>
-              <input
-                type="number"
-                [(ngModel)]="table.numOfPeople"
-                class="input-detail"
-                name="numOfPeople"
-                id="numOfPeople"
-              />
-            </div>
-          </div>
-          <button
-            class="add-table-btn"
-            id="btnMale"
-            (click)="addTableType('male')"
-          >
-            הוסף שולחן<br />
-            בגודל שונה
-          </button>
-        </div>
+    <div class="row">
+      <div class="column-3">
+        <button class="save-button" (click)="saveTables()">שמור שולחנות</button>
+        <button (click)="setSeating()" class="set-seating-button ">
+          הושבה
+        </button>
       </div>
-      <div class="">
+
+      <div class="column-1">
         <!-- div-female -->
         <h3>נשים:</h3>
-        <div id="female" class="gender-div">
-          <div *ngFor="let table of tableTypeList">
-            <div *ngIf="table.male == false" class="div-kind-of-table">
-              <div class="div-text">מספר שולחנות</div>
-              <input
-                type="number"
-                [(ngModel)]="table.amount"
-                class="input-detail"
-                name="amount"
-                id="amount"
-              />
+        <!-- <div id="female" class="gender-div"> -->
+        <ul *ngFor="let table of tableTypeList">
+          <li *ngIf="table.male == false" class="div-kind-of-table">
+            <input
+              type="number"
+              [(ngModel)]="table.amount"
+              class="input-detail"
+              name="amount"
+              id="amount"
+            />
+            <span class="div-text">שולחנות של</span>
 
-              <div class="div-text">מספר אנשים</div>
-              <input
-                type="number"
-                [(ngModel)]="table.numOfPeople"
-                class="input-detail"
-                name="numOfPeople"
-                id="numOfPeople"
-              />
-            </div>
-          </div>
-          <button
-            class="add-table-btn"
-            id="btnMale"
-            (click)="addTableType('female')"
-          >
-            הוסף שולחן<br />
-            בגודל שונה
-          </button>
-        </div>
+            <input
+              type="number"
+              [(ngModel)]="table.numOfPeople"
+              class="input-detail"
+              name="numOfPeople"
+              id="numOfPeople"
+            /><span class="div-text">אנשים. </span>
+          </li>
+        </ul>
+        <button
+          class="add-table-btn"
+          id="btnMale"
+          (click)="addTableType('female')"
+        >
+          שולחן בגודל נוסף
+        </button>
+        <!-- </div> -->
+      </div>
+      <div class="column-2">
+        <h3>גברים:</h3>
+        <!-- <div id="male" class="gender-div"> -->
+        <ul *ngFor="let table of tableTypeList">
+          <li *ngIf="table.male == true" class="div-kind-of-table">
+            <input
+              type="number"
+              [(ngModel)]="table.amount"
+              class="input-detail"
+              name="amount"
+              id="amount"
+            />
+            <span for="amount" class="div-text">שולחנות של</span>
+            <input
+              type="number"
+              [(ngModel)]="table.numOfPeople"
+              class="input-detail"
+              name="numOfPeople"
+              id="numOfPeople"
+            />
+            <span for="numOfPeople" class="div-text">אנשים. </span>
+          </li>
+        </ul>
+        <button
+          class="add-table-btn"
+          id="btnMale"
+          (click)="addTableType('male')"
+        >
+          שולחן בגודל נוסף
+        </button>
+        <!-- </div> -->
       </div>
     </div>
+    <!-- <div class="div-btn"></div>
+  </div> -->
   </div>
 </div>
