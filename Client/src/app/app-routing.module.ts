@@ -19,12 +19,13 @@ const APP_ROUTES: Routes = [
   { path: "home", component: AppComponent },
   { path: "new-user", component: RegistrationComponent },
   { path: "new-event", component: EventDetailsComponent },
-  // {path: '',component:NewLoginComponent},
+  { path: "new-login", component: NewLoginComponent },
   { path: "", component: HomeComponent },
-  { path: "eventDetails", component: EventDetailsComponent },
+  { path: "event-details", component: MenuComponent },
   { path: "seats", component: SeatsComponent },
   { path: "guests", component: GuestsComponent },
   { path: "menu", component: MenuComponent },
+
   { path: "guest-page", component: GuestPageComponent },
   { path: "show-places", component: ShowsPlacesComponent },
 

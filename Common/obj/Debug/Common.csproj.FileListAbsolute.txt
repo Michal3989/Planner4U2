@@ -21,3 +21,9 @@ C:\d\המסמכים שליD\אפרת\הנדסאים יד\M\הנדסאים יד\�
 C:\d\המסמכים שליD\אפרת\הנדסאים יד\M\הנדסאים יד\פרויקט\ProjectExample\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 C:\d\המסמכים שליD\אפרת\הנדסאים יד\M\הנדסאים יד\פרויקט\ProjectExample\Common\obj\Debug\Common.dll
 C:\d\המסמכים שליD\אפרת\הנדסאים יד\M\הנדסאים יד\פרויקט\ProjectExample\Common\obj\Debug\Common.pdb
+C:\Users\1\Desktop\planner4u\Planner4U\Common\bin\Debug\Common.dll
+C:\Users\1\Desktop\planner4u\Planner4U\Common\bin\Debug\Common.pdb
+C:\Users\1\Desktop\planner4u\Planner4U\Common\obj\Debug\Common.csprojAssemblyReference.cache
+C:\Users\1\Desktop\planner4u\Planner4U\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\1\Desktop\planner4u\Planner4U\Common\obj\Debug\Common.dll
+C:\Users\1\Desktop\planner4u\Planner4U\Common\obj\Debug\Common.pdb

@@ -70,3 +70,22 @@ C:\d\המסמכים שליD\אפרת\הנדסאים יד\M\הנדסאים יד\�
 C:\d\המסמכים שליD\אפרת\הנדסאים יד\M\הנדסאים יד\פרויקט\ProjectExample\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\d\המסמכים שליD\אפרת\הנדסאים יד\M\הנדסאים יד\פרויקט\ProjectExample\DAL\obj\Debug\DAL.dll
 C:\d\המסמכים שליD\אפרת\הנדסאים יד\M\הנדסאים יד\פרויקט\ProjectExample\DAL\obj\Debug\DAL.pdb
+C:\Users\1\Desktop\planner4u\Planner4U\DAL\bin\Debug\DAL.dll.config
+C:\Users\1\Desktop\planner4u\Planner4U\DAL\bin\Debug\DAL.dll
+C:\Users\1\Desktop\planner4u\Planner4U\DAL\bin\Debug\DAL.pdb
+C:\Users\1\Desktop\planner4u\Planner4U\DAL\bin\Debug\AutoMapper.dll
+C:\Users\1\Desktop\planner4u\Planner4U\DAL\bin\Debug\Common.dll
+C:\Users\1\Desktop\planner4u\Planner4U\DAL\bin\Debug\Entities.dll
+C:\Users\1\Desktop\planner4u\Planner4U\DAL\bin\Debug\EntityFramework.dll
+C:\Users\1\Desktop\planner4u\Planner4U\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\1\Desktop\planner4u\Planner4U\DAL\bin\Debug\Common.pdb
+C:\Users\1\Desktop\planner4u\Planner4U\DAL\bin\Debug\Entities.pdb
+C:\Users\1\Desktop\planner4u\Planner4U\DAL\bin\Debug\Entities.dll.config
+C:\Users\1\Desktop\planner4u\Planner4U\DAL\bin\Debug\AutoMapper.xml
+C:\Users\1\Desktop\planner4u\Planner4U\DAL\bin\Debug\EntityFramework.xml
+C:\Users\1\Desktop\planner4u\Planner4U\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\1\Desktop\planner4u\Planner4U\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\1\Desktop\planner4u\Planner4U\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\1\Desktop\planner4u\Planner4U\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\1\Desktop\planner4u\Planner4U\DAL\obj\Debug\DAL.dll
+C:\Users\1\Desktop\planner4u\Planner4U\DAL\obj\Debug\DAL.pdb

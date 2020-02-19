@@ -1,58 +1,180 @@
-.invalidField{
-    color:red;
+.invalidField {
+  color: red;
 }
-.invalidInput{
-    border-color:red;
+.invalidInput {
+  border-color: red;
 }
-.container-flex {
-    direction: rtl;
+.container {
+  /* direction: rtl;
     height:50%;
     width:100%;
-    display: flex;
+    display: flex; */
+  background-image: url("assets/images/BackgroundLogo.jpg");
+  background-color: #cccccc;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
 }
 
-table{
-    width: 70%;
-   
+table,
+tr td {
+  border: 2px solid #8a7878;
 }
-  table ,tr td{
-      border:1px solid palevioletred;
-  }
-  tbody {
-      display:block;
-      height:550px;
-      overflow:auto;
-  }
-  thead, tbody tr {
-      display:table;
-      width:100%;
-      table-layout:fixed;/* even columns width , fix width of table too*/
-  }
-  thead {
-      width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width */
-  }
-  /* table {
-      width:400px;
-  } */
+tbody {
+  display: block;
+  height: 400px;
+  overflow: auto;
+}
+thead,
+tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed; /* even columns width , fix width of table too*/
+}
+thead {
+  width: calc(
+    100% - 1em
+  ); /* scrollbar is average 1em/16px width, remove it from thead width */
+}
+/* table {
+  height: 500px;
+} */
 
-.form-new-guest{
+.form-new-guest {
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 30%;
+}
+.numberInput {
+  width: 60%;
+  background-color: rgb(245, 217, 222);
+}
+.checkboxInput {
+  text-align: center;
+}
+.message-div {
+  text-align: center;
+}
+.message-span {
+  font-size: 700%;
+  color: palevioletred;
+}
+.column-1 {
+  float: left;
+  width: 75%;
+  padding: 10px;
+}
+.column-2 {
+  float: left;
+  width: 25%;
+  padding: 15px 10px 0 0;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.wrapper {
+  padding: 3%;
+  /* margin: 10px; */
+  /* login: */
 
-padding-left: 5%;
-padding-right: 5%;
-    width: 30%;
+  background: rgba(255, 255, 255, 0.35);
 
+  display: inline-grid;
+
+  width: 90%;
 }
-.numberInput{
-    width: 60%;
-    background-color: rgb(245, 217, 222);
+/* Clear floats after the columns */
+
+.div-btn {
+  display: flex;
+  /* -webkit-box-pack: end; */
+  justify-content: space-between;
+  padding: 1.5%;
 }
-.checkboxInput{
-    text-align: center;
+.save-button {
+  background-color: #fbf0ee;
+  color: #8a7878;
+  margin-left: 10%;
+  width: 150px;
+  height: 50px;
+  font-size: large;
+  font-weight: 600;
+  border: 2px solid #8a7878;
 }
-.message-div{
-    text-align: center ;
+
+.save-button:hover,
+.set-seating-button:hover,
+.btn-get-detail:hover {
+  /* background-color: #fdf5f5;
+    color: #fcdcdd; */
+  color: #fae8e3;
+  background-color: rgba(213, 151, 155, 0.5);
+  border-color: #fae8e3;
 }
-.message-span{
-    font-size: 700%;
-    color: palevioletred;
+.set-seating-button {
+  background-color: #fbf0ee;
+  color: #8a7878;
+  /* margin-left: 10%; */
+  width: 150px;
+  height: 50px;
+  font-size: large;
+  font-weight: 600;
+  border: 2px solid #8a7878;
+}
+
+.div-text {
+  /* margin: 10px;
+  margin-right: 0; */
+  margin: 0 0 10px;
+  font-weight: 500;
+  padding-right: 5px;
+  display: block;
+  /*login:*/
+  display: inline;
+}
+
+.input-detail {
+  background-color: transparent;
+  width: 90%;
+  border: none;
+  padding-right: 5px;
+  border-bottom: 2px solid #8a7878;
+  margin: 0 0 10px;
+}
+input:focus {
+  outline: none;
+
+  border-bottom: 2px solid black;
+}
+.wrapper-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  /* align-content: space-around; */
+  width: 90%;
+}
+.wrapper-1 {
+  background: rgba(255, 255, 255, 0.2);
+}
+.btn-get-detail {
+  width: 95%;
+  height: 100px;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: xx-large;
+}
+.add-guest-button {
+  background-color: #f8c5c6;
+  margin-top: 25px;
+}
+.add-guest-button :hover {
+  font-size: large;
+}
+.table > thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 2px solid;
 }
