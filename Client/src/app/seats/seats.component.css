@@ -59,11 +59,12 @@ h3 {
   background-color: #fbf0ee;
   color: #8a7878;
   margin-left: 10%;
-  width: 30%;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   font-size: large;
   font-weight: 600;
   border: 2px solid #8a7878;
+  border-radius: 50%;
 }
 .save-button:hover,
 .set-seating-button:hover {
@@ -74,11 +75,13 @@ h3 {
 .set-seating-button {
   background-color: #fbf0ee;
   color: #8a7878;
-  width: 30%;
-  height: 50px;
+  margin-left: 10%;
+  width: 100px;
+  height: 100px;
   font-size: large;
   font-weight: 600;
   border: 2px solid #8a7878;
+  border-radius: 50%;
 }
 .add-table-btn {
   width: 85%;

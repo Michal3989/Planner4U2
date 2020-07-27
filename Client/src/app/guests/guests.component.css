@@ -98,10 +98,11 @@ thead {
 .save-button {
   background-color: #fbf0ee;
   color: #8a7878;
-  margin-left: 10%;
-  width: 150px;
-  height: 50px;
+  /* margin-left: 10%; */
+  width: 100px;
+  height: 100px;
   font-size: large;
+  border-radius: 50%;
   font-weight: 600;
   border: 2px solid #8a7878;
 }
@@ -119,9 +120,10 @@ thead {
   background-color: #fbf0ee;
   color: #8a7878;
   /* margin-left: 10%; */
-  width: 150px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   font-size: large;
+  border-radius: 50%;
   font-weight: 600;
   border: 2px solid #8a7878;
 }
