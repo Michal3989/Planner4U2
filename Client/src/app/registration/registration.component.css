@@ -24,7 +24,7 @@
 .div-text {
   margin: 10px;
   margin-right: 0;
-
+  font-weight: bold;
   display: inline;
 }
 
@@ -43,7 +43,13 @@ input:focus {
   margin-top: 15%;
   padding: 20px;
 }
-
+button:disabled,
+button[disabled] {
+  cursor: no-drop;
+}
+.regi-button:hover {
+  font-size: larger;
+}
 .invalidField {
   color: red;
 }

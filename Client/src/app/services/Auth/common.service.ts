@@ -1,43 +1,44 @@
 import { Injectable } from "@angular/core";
-import 'rxjs/add/operator/map';
+import "rxjs/add/operator/map";
 import { BaseHttpService, BaseApiService } from "../../shared";
 import { Router } from "@angular/router";
-import { OwnerDto,EventDto,EventTypeDto } from "../../models";
-import {Subject} from 'rxjs/Subject';
-
+import { OwnerDto, EventDto, EventTypeDto } from "../../models";
+import { Subject } from "rxjs/Subject";
 
 @Injectable()
 export class CommonService extends BaseApiService {
-  
-    public currentOwner: OwnerDto;
-    public currentEvent:EventDto=new EventDto();
-    public eventTypes:EventTypeDto[]; 
-    public isLogin:boolean;  
-    public flagToChangeEvent:Subject<boolean>;
-    
-    constructor(private router: Router,private baseHttpService: BaseHttpService) {      
-        super('Event'); 
-        this.flagToChangeEvent=new Subject<boolean>();    
-    }
-    
-    setCurrentOwner(owner:OwnerDto){      
-        this.currentOwner = owner;
-        this.isLogin=true;
-    }
-    setCurrentEvent(event:EventDto){
-        this.currentEvent = event;
-    }
+  public currentOwner: OwnerDto;
+  public currentEvent: EventDto = new EventDto();
+  public eventTypes: EventTypeDto[];
+  public isLogin: boolean;
+  public flagToChangeEvent: Subject<boolean>;
 
-   signOut(){ 
-         this.currentOwner=null; 
-         this.router.navigateByUrl('');
-       
+  constructor(
+    private router: Router,
+    private baseHttpService: BaseHttpService
+  ) {
+    super("Event");
+    this.flagToChangeEvent = new Subject<boolean>();
+  }
+
+  setCurrentOwner(owner: OwnerDto) {
+    this.currentOwner = owner;
+    this.isLogin = true;
+  }
+  setCurrentEvent(event: EventDto) {
+    this.currentEvent = event;
+  }
+
+  convertEventCodeToEventDescription(typeCode: number): string {
+    for (let i in this.eventTypes) {
+      if (this.eventTypes[i].id == typeCode) {
+        return this.eventTypes[i].description;
+      }
     }
+  }
 
-   
-
-    
-
-    
+  signOut() {
+    this.currentOwner = null;
+    this.router.navigateByUrl("");
+  }
 }
-

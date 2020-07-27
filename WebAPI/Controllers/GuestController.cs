@@ -57,11 +57,13 @@ namespace WebAPI.Controllers
         }
 
 
-        [HttpGet]
+        [HttpGet]        
         [Route("api/Guest/GetCategories/{eventTypeId}")]
         public List<CategoryDto> GetCategories(byte eventTypeId)
         {
-            return GuestBL.GetCategories(eventTypeId);
+            List<CategoryDto> l = new List<CategoryDto>();
+            l= GuestBL.GetCategories(eventTypeId);
+            return l;
         }
 
 

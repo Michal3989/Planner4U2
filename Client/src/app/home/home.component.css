@@ -13,25 +13,36 @@
   /* border: solid;
   border-radius: 50%;
   border-color: beige; */
-  display: inline-table;
+  /* display: inline-table; */
   padding: 3%;
-  margin: 10px;
+  float: right;
+  width: 21%;
+  margin: 26px;
 }
+/* .wrapper-space {
+  float: left;
+  width: 6.66%;
+} */
 .wrapper:hover {
   background: rgba(255, 255, 255, 0.6);
   /* border: solid;
   /* border-radius: 50%; */
   /* border-color: beige; */
 }
-.info {
-  margin-top: 10%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+.info-row {
+  margin-top: 8%;
+  /* position: relative; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: space-around; */
+}
+.info-row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 .div-i {
-  padding: 13%;
+  padding: 24%;
   margin: 10px;
 }
 .i-container {

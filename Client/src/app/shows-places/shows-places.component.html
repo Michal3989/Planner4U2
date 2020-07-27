@@ -34,29 +34,62 @@
     </button>
   </div>
 </nav>
-<div class="show-places">
-  <h3>
-    גברים
-  </h3>
-  <span *ngFor="let table of tablesWithGuests">
-    <span *ngIf="table.male == 1">
-      <h5>{{ table.title }}</h5>
-      <span *ngFor="let guest of table.guestsFullName">
-        <h6>{{ guest }}</h6>
-      </span>
-    </span>
-  </span>
-</div>
-<div>
-  <h3>
-    נשים
-  </h3>
-  <span *ngFor="let table of tablesWithGuests">
-    <span *ngIf="table.male == 0">
-      <h5>{{ table.title }}</h5>
-      <span *ngFor="let guest of table.guestsFullName">
-        <h6>{{ guest }}</h6>
-      </span>
-    </span>
-  </span>
+<div class="container">
+  <div class="div-event-detail">
+    {{
+      commonService.convertEventCodeToEventDescription(
+        commonService.currentEvent.eventTypeCode
+      )
+    }}
+    {{ commonService.currentEvent.name }}
+    {{
+      commonService.currentEvent.date
+        .slice(0, 10)
+        .split("-")
+        .reverse()
+        .join(".")
+    }}
+  </div>
+
+  <button
+    class="btn-show-tables"
+    *ngIf="tablesWithGuests == null"
+    (click)="getTablesWithGuests(this.commonService.currentEvent.id)"
+  >
+    פריסת המוזמנים באולם
+  </button>
+  <div class="wrapper">
+    <div *ngIf="tablesWithGuests" class="row">
+      <div class="column-female">
+        <h3>
+          נשים
+        </h3>
+        <table class="table table-hover">
+          <div class="div-table" *ngFor="let table of tablesWithGuests">
+            <div *ngIf="table.male == 0">
+              <label>{{ table.title }}</label>
+              <div *ngFor="let guest of table.guestsFullName">
+                <span>{{ guest }}</span>
+              </div>
+            </div>
+          </div>
+        </table>
+      </div>
+      <div class="column-male">
+        <h3>
+          גברים
+        </h3>
+        <table class="table table-hover">
+          <div class="div-table" *ngFor="let table of tablesWithGuests">
+            <div *ngIf="table.male == 1">
+              <label>{{ table.title }}</label>
+              <div *ngFor="let guest of table.guestsFullName">
+                <span>{{ guest }}</span>
+              </div>
+            </div>
+          </div>
+        </table>
+      </div>
+    </div>
+  </div>
 </div>

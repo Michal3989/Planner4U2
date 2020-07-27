@@ -45,6 +45,21 @@
           <button (click)="sendInvitations()" class="set-seating-button ">
             שליחת הזמנות
           </button>
+          <div class="div-event-detail">
+            {{
+              commonService.convertEventCodeToEventDescription(
+                commonService.currentEvent.eventTypeCode
+              )
+            }}
+            {{ commonService.currentEvent.name }}
+            {{
+              commonService.currentEvent.date
+                .slice(0, 10)
+                .split("-")
+                .reverse()
+                .join(".")
+            }}
+          </div>
         </div>
         <table class="table table-hover">
           <thead>

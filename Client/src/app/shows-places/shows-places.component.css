@@ -1,0 +1,76 @@
+.container {
+  background-image: url("assets/images/BackgroundLogo.jpg");
+  background-color: #cccccc;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+.column-female {
+  float: left;
+  width: 48%;
+  margin: 1%;
+}
+.column-male {
+  float: left;
+  width: 48%;
+  margin: 1%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row {
+  margin: 0;
+}
+.wrapper {
+  margin-top: 1%;
+  padding-left: 1%;
+  background: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  padding-right: 1%;
+}
+table,
+tr td {
+  border: 2px solid #9e9c9c;
+}
+.div-table {
+  border: #8a7878;
+  border-style: solid;
+  margin: 1%;
+  padding: 2%;
+  text-align: center;
+  border-radius: 50%;
+}
+.div-table:hover {
+  background-color: #fdf8f7;
+}
+h3 {
+  text-align: center;
+}
+.btn-show-tables {
+  width: 98%;
+  height: 100px;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: xx-large;
+}
+.btn-show-tables:hover {
+  color: #fae8e3;
+  background-color: rgba(213, 151, 155, 0.5);
+  border-color: #fae8e3;
+}
+.div-event-detail {
+  background: rgba(255, 255, 255, 0.4);
+  font-size: xx-large;
+  border-radius: 50px;
+  padding: 15px 15px 15px 15px;
+  width: 32%;
+
+  position: relative;
+  right: 67%;
+  top: 5px;
+  margin: 1%;
+}

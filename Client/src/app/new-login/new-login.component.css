@@ -49,6 +49,10 @@ input:focus {
   font-size: large;
   /* background-color: #f1a0a2; */
 }
+.login-button:disabled {
+  cursor: no-drop;
+}
+
 .invalidField {
   color: red;
 }

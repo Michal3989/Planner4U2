@@ -4,7 +4,7 @@
       <form class="wrapper" [formGroup]="eventDetailsForm">
         <!-- <div class="wrapper"> -->
         <!-- <div class="form-group"> -->
-        <div for="selectType" class="div-text">סוג האירוע</div>
+        <div for="selectType" class="div-text">סוג האירוע:</div>
         <select
           class="input-detail"
           [ngClass]="{
@@ -31,7 +31,7 @@
 
         <!-- </div> -->
         <!-- <div class="form-group"> -->
-        <div class="div-text">תאריך האירוע</div>
+        <div class="div-text">תאריך האירוע:</div>
         <input
           type="date"
           class="input-detail"
@@ -56,7 +56,7 @@
 
         <!-- </div> -->
         <!-- <div class="form-group"> -->
-        <div class="div-text">שם החוגגים</div>
+        <div class="div-text">שם החוגגים:</div>
         <input
           autocomplete="off"
           type="text"
@@ -84,7 +84,7 @@
         <!-- </div> -->
 
         <!-- <div class="form-group"> -->
-        <div class="div-text">טקסט אישי</div>
+        <div class="div-text">טקסט אישי:</div>
         <input
           autocomplete="off"
           type="text"
@@ -95,17 +95,36 @@
         />
 
         <!-- </div> -->
-
-        <!-- <div>
+        <div class="div-text">תמונת הזמנה:</div>
+        <div class="div-img">
           <img
-            style="width:20%"
             *ngIf="commonService.currentEvent.picture != null"
             src="http://localhost:52718/images/{{
               commonService.currentEvent.picture
             }}"
           />
         </div>
-        <div><img style="width:20%" [src]="url" *ngIf="url" /></div> -->
+        <div class="div-img"><img [src]="url" *ngIf="url" /></div>
+        <div
+          *ngIf="commonService.currentEvent.picture == null && myFile == null"
+        >
+          <input
+            id="file"
+            type="file"
+            class="upload-file"
+            (change)="changeFile($event)"
+          />
+        </div>
+        <div
+          *ngIf="commonService.currentEvent.picture != null || myFile != null"
+        >
+          <input
+            id="file"
+            type="file"
+            class="upload-file"
+            (change)="changeFile($event)"
+          />
+        </div>
         <!-- <div class="buttons-div"> -->
         <button
           class="confirm-event-button"
@@ -117,27 +136,6 @@
         >
           שמור אירוע
         </button>
-
-        <!-- </div> -->
-        <!-- <div *ngIf="commonService.currentEvent.picture == null && myFile == null">
-        <label class="label-of-file-new-upload">
-          בחר תמונה<input
-            id="file"
-            type="file"
-            class="upload-file"
-            (change)="changeFile($event)"
-        /></label>
-      </div> -->
-        <!-- <div *ngIf="commonService.currentEvent.picture != null || myFile != null">
-        <label class="label-of-file"
-          >בחר תמונה חדשה<input
-            id="file"
-            type="file"
-            class="upload-file"
-            (change)="changeFile($event)"
-        /></label>
-      </div> -->
-        <!-- </div> -->
       </form>
     </div>
     <div class="column-1">
@@ -159,7 +157,14 @@
                 event.eventTypeCode
               )
             }}
-            של {{ event.name }}
+            {{ event.name }}
+            {{
+              event.date
+                .slice(0, 10)
+                .split("-")
+                .reverse()
+                .join(".")
+            }}
           </p>
         </div>
       </div>

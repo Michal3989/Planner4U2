@@ -71,6 +71,8 @@ export class EventDetailsComponent implements OnInit {
     this.commonService.flagToChangeEvent.next(true);
     //ריענון המסך :
     this.setFormGroupsValues();
+    debugger;
+
     this._cdr.detectChanges();
   }
 

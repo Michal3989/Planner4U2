@@ -97,14 +97,15 @@ thead {
 }
 .save-button {
   background-color: #fbf0ee;
+  position: relative;
   color: #8a7878;
-  /* margin-left: 10%; */
   width: 100px;
   height: 100px;
   font-size: large;
   border-radius: 50%;
   font-weight: 600;
   border: 2px solid #8a7878;
+  top: -10px;
 }
 
 .save-button:hover,
@@ -176,7 +177,16 @@ input:focus {
 .add-guest-button :hover {
   font-size: large;
 }
+.add-guest-button:disabled {
+  cursor: no-drop;
+}
 .table > thead > tr > th {
   vertical-align: bottom;
   border-bottom: 2px solid;
+}
+.div-event-detail {
+  background: rgba(255, 255, 255, 0.4);
+  font-size: xx-large;
+  border-radius: 50px;
+  padding: 23px 15px 0px 15px;
 }

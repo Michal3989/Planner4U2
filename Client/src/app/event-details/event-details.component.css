@@ -1,18 +1,15 @@
 .container {
   background-image: url("assets/images/BackgroundLogo.jpg");
-  background-color: #cccccc;
-  height: 100%;
+  height: 130%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
   width: 100%;
 }
 
 .wrapper {
   padding: 3%;
   margin: 10px;
-  /* login: */
 
   background: rgba(255, 255, 255, 0.5);
 
@@ -50,7 +47,12 @@ input:focus {
 }
 .upload-file {
   /* grid-area: uploadFile; */
-  display: none;
+  background-color: transparent;
+  border: none;
+  padding-right: 5px;
+  border-bottom: 2px solid #8a7878;
+  margin: 0 0 15px;
+  width: 100%;
 }
 .label-of-file-new-upload {
   display: inline-block;
@@ -130,18 +132,25 @@ input:focus {
   margin: 10px;
   right: 190%;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  background-color: #fadedc;
-  border-color: #735959;
-  border-style: groove;
+  width: 105px;
+  height: 105px;
+
   text-align: center;
   padding: 10px;
   padding-top: 20px;
+
+  background-color: #fbf0ee;
+  color: #8a7878;
+
+  border: 2px solid #8a7878;
 }
 .event-list-item:hover {
-  background-color: #c851793b;
+  /* background-color: #c851793b; */
   cursor: pointer;
+
+  color: #fae8e3;
+  background-color: rgba(213, 151, 155, 0.5);
+  border-color: #fae8e3;
 }
 
 .form-event-details {
@@ -162,10 +171,18 @@ input:focus {
 .confirm-event-button:hover {
   font-size: large;
 }
-
+.confirm-event-button:disabled {
+  cursor: no-drop;
+}
+.div-img {
+  padding-right: 30%;
+  padding-left: 30%;
+}
 .new-event-button {
-  /* font-size: large; */
-  font-weight: bold;
+  font-weight: 700;
+  padding-top: 8px;
+  font-size: initial;
+  color: black;
 }
 * {
   box-sizing: border-box;
@@ -190,4 +207,8 @@ p {
   content: "";
   display: table;
   clear: both;
+}
+img {
+  width: 100%;
+  border-radius: 40px;
 }

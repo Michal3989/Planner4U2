@@ -71,7 +71,7 @@ namespace WebAPI.Controllers
             int ans = EventBL.AddEvent(newEvent);
             newEvent.Id = ans;
             newEvent.Picture=ans+""+ file.FileName.Substring(file.FileName.IndexOf("."));
-            file.SaveAs(@"C:\d\המסמכים שליD\אפרת\הנדסאים יד\M\הנדסאים יד\פרויקט\ProjectExample\WebAPI\Images\" + newEvent.Picture);
+            file.SaveAs(@"C:\Users\1\Desktop\planner4u\Planner4U\WebAPI\Images\" + newEvent.Picture);
             bool ansUpdate=EventBL.UpdateEvent(newEvent);
             return ansUpdate ? ans : -1;
         }
@@ -103,12 +103,14 @@ namespace WebAPI.Controllers
                //אם היה תמונה
                 if (oldEvent.Picture != null)
                 {
-                    File.Delete(@"C:\d\המסמכים שליD\אפרת\הנדסאים יד\M\הנדסאים יד\פרויקט\ProjectExample\WebAPI\Images\" + oldEvent.Picture);
+                
+                    File.Delete(@"C:\Users\1\Desktop\planner4u\Planner4U\WebAPI\Images\" + oldEvent.Picture);
                 }
               
                updateEvent.Picture = updateEvent.Id + "" + file.FileName.Substring(file.FileName.IndexOf("."));
-               file.SaveAs(@"C:\d\המסמכים שליD\אפרת\הנדסאים יד\M\הנדסאים יד\פרויקט\ProjectExample\WebAPI\Images\" + updateEvent.Picture);
+               file.SaveAs(@"C:\Users\1\Desktop\planner4u\Planner4U\WebAPI\Images\" + updateEvent.Picture);
             }
+        
             bool res=EventBL.UpdateEvent(updateEvent);
             return isFile ? true : res;
         }

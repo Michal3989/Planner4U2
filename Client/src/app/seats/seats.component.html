@@ -37,7 +37,21 @@
 <div class="container">
   <div class="wrapper">
     <!-- <h2 class="">גודל השולחנות באולם:</h2> -->
-
+    <div class="div-event-detail">
+      {{
+        commonService.convertEventCodeToEventDescription(
+          commonService.currentEvent.eventTypeCode
+        )
+      }}
+      {{ commonService.currentEvent.name }}
+      {{
+        commonService.currentEvent.date
+          .slice(0, 10)
+          .split("-")
+          .reverse()
+          .join(".")
+      }}
+    </div>
     <div class="row">
       <div class="column-3">
         <button class="save-button" (click)="saveTables()">
